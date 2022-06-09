@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: wheat;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 20px;
+    float: right;
+    margin-top: -50px;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+input{
+    width: 300px;
+    height: 50px;
+    padding: 20px;
+    border: 1px solid rgb(152, 149, 149);
+}
+.btn{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    width: 120px ;
+    height: 40px;
+    border: none;
+    margin-top: -10px;
+}
+.btn-1{
+    color: blue;
+    border-radius: 10px;
+    width: 90px ;
+    height: 30px;
+    border: 1px solid grey;
+    margin-top: 3px; 
+    
+}
+.child1,
+.child2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    gap: 20px;
+    
+
+}
+.card{
+    height: 180px !important;
+    background-color: whitesmoke;
+}
+
+img{
+    margin:20px;
+} 
+@media (max-width:920px){
+    .child1,
+    .child2{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: no-wrap;
+        gap: 20px;}
+        body{
+            background-color: white;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            list-style-type: none;
+            gap: 20px;
+            float: left;
+            margin-top: -100px;
+            margin-bottom: 40px;
+            
+        }
+        input{
+            width: 250px;
+            height: 53px;
+            padding: 20px;
+            border: 1px solid rgb(152, 149, 149);
+            margin-top: 50px;
+        }
+        .card-body{
+            margin-left: 30px;
+        }
+        .bon{
+            margin-left: 20px;
+            color: whitesmoke;
+            border: none;
+            font-size: 0%;
+            width: 0;
+            height: 0;
+        }
+        
+        ul{
+            gap: 5px;
+        }
+    }

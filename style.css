@@ -3,17 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: wheat;
+
+.card-wrap{
+    width: 92vw !important;
+    height: 90vh;
+    /* background-color: blue; */
 }
 
 ul{
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
     list-style-type: none;
     gap: 20px;
-    float: right;
     margin-top: -50px;
     
 }
@@ -24,7 +26,7 @@ a{
 input{
     width: 300px;
     height: 50px;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid rgb(152, 149, 149);
 }
 .btn{
@@ -40,13 +42,13 @@ input{
     color: blue;
     border-radius: 10px;
     width: 90px ;
-    height: 30px;
+    height: 27px;
     border: 1px solid grey;
     margin-top: 3px; 
+    display: block;
     
 }
-.child1,
-.child2{
+.card-content{
     display: flex;
     flex-direction: row;
     flex-wrap: no-wrap;
@@ -55,54 +57,125 @@ input{
 
 }
 .card{
-    height: 180px !important;
+    height: 190px;
     background-color: whitesmoke;
 }
 
 img{
     margin:20px;
 } 
-@media (max-width:920px){
-    .child1,
-    .child2{
+/* media query */
+
+@media screen and (max-width: 1199px) {
+    .card-wrap{
+        height: auto;
+    }
+}
+@media screen and (max-width:991px){
+    .card-content{
         display: flex;
         flex-direction: column;
-        flex-wrap: no-wrap;
-        gap: 20px;}
-        body{
-            background-color: white;
-        }
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+        
+        
+        
         ul{
-            display: flex;
+            gap: 15px;
             flex-direction: row;
-            flex-wrap: wrap;
-            list-style-type: none;
-            gap: 20px;
-            float: left;
             margin-top: -100px;
             margin-bottom: 40px;
+            padding-left: 0 !important;
             
         }
         input{
             width: 250px;
             height: 53px;
-            padding: 20px;
-            border: 1px solid rgb(152, 149, 149);
             margin-top: 50px;
         }
-        .card-body{
+        .card-body{ 
             margin-left: 30px;
         }
-        .bon{
-            margin-left: 20px;
-            color: whitesmoke;
-            border: none;
-            font-size: 0%;
-            width: 0;
-            height: 0;
+        
+        
+        .col-4 img{
+            width: 150px !important;
+            height: 150px !important;
+        }
+        .space-top{
+            margin-top: 90px;
+        }
+        .btn{
+            width: 91px;
+            letter-spacing: -1px;
+            font-size: 15px;
+        }
+    }
+
+    @media screen and (max-width:550px){
+        ul{
+            gap: 10px;
+        }
+
+        input{
+            height: 40px;
         }
         
-        ul{
-            gap: 5px;
+        
+        .col-4 img{
+            width: 100px !important;
+            height: 100px !important;
+        }
+
+        .btn-1{
+            margin-bottom: 10px !important;
+        }
+
+        
+    }
+
+    @media screen and (max-width:345px){
+        h1{
+            margin-bottom: 40px;
+        }
+        .col-4 img{
+            width: 80px !important;
+            height: 80px !important;
+        } 
+
+        .card-title{
+            font-size: 1.05rem !important;
+        }
+
+        .card-text{
+            margin-bottom: 10px !important;
+        }
+
+        input{
+            width: 200px;
+            height: 35px;
+        }
+        .card-body{
+            margin: 0 !important;
+            padding: 10px !important;
+
+        }
+        
+        .row, 
+        .col-8{
+            display: block !important;
+            width: 100% !important;
+        }
+
+        .card{
+            height: 250px;
+        }
+        .btn-1{
+            width: 68px;
+            display: inline;
+        }
+        .space-top{
+            margin-top: 70px !important;
         }
     }
